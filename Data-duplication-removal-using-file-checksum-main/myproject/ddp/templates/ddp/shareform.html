@@ -1,0 +1,26 @@
+{% extends 'ddp/main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<h1 style="text-align:center">Share Your Files</h1>
+<div  class="col" style="text-align:center">
+    <div class="col-md">
+		<div class="card card-body" style="background-color:darkgray;">
+<P style="text-align:center">Chose your file and press submit</P>
+
+
+    <form action ="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{sharefile}}
+        <a href="{% url 'user' user.username %}">cancel</a>
+        <input type="submit" name="Submit">
+
+    </form>
+
+
+{% endblock %}
+        </div>
+    </div>
+</div>
